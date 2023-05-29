@@ -1,1 +1,5 @@
-{"internalName":"AudioAccessory6,1","modelName":"HomePod (2nd generation)","supportedVersions":[]}
+{
+  "internalName": "AudioAccessory6,1",
+  "modelName": "HomePod (2nd generation)",
+  "supportedVersions": []
+}

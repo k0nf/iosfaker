@@ -1,1 +1,5 @@
-{"internalName":"Mac14,3","modelName":"Mac mini (M2, 2023)","supportedVersions":["13.4","13.3.1","13.3","13.2.1","13.2"]}
+{
+  "internalName": "Mac14,3",
+  "modelName": "Mac mini (M2, 2023)",
+  "supportedVersions": ["13.4", "13.3.1", "13.3", "13.2.1", "13.2"]
+}

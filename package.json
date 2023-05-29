@@ -13,14 +13,17 @@
     "fs": "^0.0.1-security"
   },
   "scripts": {
-    "update": "node update.js"
+    "update": "node update.js",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
   },
   "description": "This library provides functionality to retrieve random device details and search for devices based on iOS versions or device models.",
   "bugs": {
     "url": "https://github.com/k0nf/iosfaker/issues"
   },
   "homepage": "https://github.com/k0nf/iosfaker#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
   "keywords": [
     "iosfaker"
   ]

@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const DEVICE_CATEGORIES = ['iPhone', 'iPad', 'iPod', 'Watches', 'Other'];
+const DEVICE_CATEGORIES = ["iPhone", "iPad", "iPod", "Watches", "Other"];
 
 class RandomDevice {
   constructor(deviceData) {
@@ -12,20 +12,23 @@ class RandomDevice {
   }
 
   getRandomVersion() {
-    const randomIndex = Math.floor(Math.random() * this.supportedVersions.length);
+    const randomIndex = Math.floor(
+      Math.random() * this.supportedVersions.length
+    );
     return this.supportedVersions[randomIndex];
   }
-
 }
 
 const getRandom = (category) => {
   const categoryPath = path.join(__dirname, category);
-  const jsonFiles = fs.readdirSync(categoryPath).filter(file => path.extname(file) === '.json');
+  const jsonFiles = fs
+    .readdirSync(categoryPath)
+    .filter((file) => path.extname(file) === ".json");
   const randomIndex = Math.floor(Math.random() * jsonFiles.length);
   const randomFile = jsonFiles[randomIndex];
 
   const filePath = path.join(categoryPath, randomFile);
-  const fileData = fs.readFileSync(filePath, 'utf8');
+  const fileData = fs.readFileSync(filePath, "utf8");
   const deviceData = JSON.parse(fileData);
 
   return new RandomDevice(deviceData);
@@ -43,17 +46,23 @@ const getDevice = (category) => {
 
 const getDeviceByIOSVersion = (version, category) => {
   const categoryPath = path.join(__dirname, category);
-  const jsonFiles = fs.readdirSync(categoryPath).filter(file => path.extname(file) === '.json');
+  const jsonFiles = fs
+    .readdirSync(categoryPath)
+    .filter((file) => path.extname(file) === ".json");
   const matchingDevices = [];
 
   for (const jsonFile of jsonFiles) {
     const filePath = path.join(categoryPath, jsonFile);
-    const fileData = fs.readFileSync(filePath, 'utf8');
+    const fileData = fs.readFileSync(filePath, "utf8");
     const deviceData = JSON.parse(fileData);
 
-    const matchedVersions = deviceData.supportedVersions.filter(v => v.startsWith(version));
+    const matchedVersions = deviceData.supportedVersions.filter((v) =>
+      v.startsWith(version)
+    );
     if (matchedVersions.length > 0) {
-      matchingDevices.push(new RandomDevice({ ...deviceData, supportedVersions: matchedVersions }));
+      matchingDevices.push(
+        new RandomDevice({ ...deviceData, supportedVersions: matchedVersions })
+      );
     }
   }
 

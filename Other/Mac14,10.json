@@ -1,1 +1,5 @@
-{"internalName":"Mac14,10","modelName":"MacBook Pro (M2 Pro, 16-inch, 2023)","supportedVersions":["13.4","13.3.1","13.3","13.2.1","13.2"]}
+{
+  "internalName": "Mac14,10",
+  "modelName": "MacBook Pro (M2 Pro, 16-inch, 2023)",
+  "supportedVersions": ["13.4", "13.3.1", "13.3", "13.2.1", "13.2"]
+}

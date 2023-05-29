@@ -1,1 +1,5 @@
-{"internalName":"iPod2,1","modelName":"iPod touch 2G","supportedVersions":["4.2.1","4.1","4.0.2","4.0","2.2.1","2.2","2.1.1"]}
+{
+  "internalName": "iPod2,1",
+  "modelName": "iPod touch 2G",
+  "supportedVersions": ["4.2.1", "4.1", "4.0.2", "4.0", "2.2.1", "2.2", "2.1.1"]
+}
