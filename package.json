@@ -2,7 +2,10 @@
   "name": "iosfaker",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/k0nf/iosfaker.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k0nf/iosfaker.git"
+  },
   "author": "Osman Elezi <89322194+k0nf@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
@@ -11,5 +14,14 @@
   },
   "scripts": {
     "update": "node update.js"
-  }
+  },
+  "description": "This library provides functionality to retrieve random device details and search for devices based on iOS versions or device models.",
+  "bugs": {
+    "url": "https://github.com/k0nf/iosfaker/issues"
+  },
+  "homepage": "https://github.com/k0nf/iosfaker#readme",
+  "devDependencies": {},
+  "keywords": [
+    "iosfaker"
+  ]
 }
