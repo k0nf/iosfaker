@@ -2,7 +2,9 @@
 
 This library provides functionality to retrieve random device details and search for devices based on iOS versions or device models.
 
-## Installation
+[![npm](https://img.shields.io/npm/v/iosfaker)](https://www.npmjs.com/package/iosfaker) [![npm](https://img.shields.io/npm/dt/iosfaker)](https://www.npmjs.com/package/iosfaker)
+
+## 📦 Installation
 
 You can install this library using either yarn or npm.
 
@@ -18,7 +20,7 @@ yarn add iosfaker
 npm install iosfaker
 ```
 
-## Usage
+## 🪄 Usage
 
 ### Importing the Library
 
@@ -63,7 +65,7 @@ The `searchDeviceByModel` function searches for devices in all categories (iPhon
 
 Please note that you need to provide the correct category when calling the functions ('iPhone', 'iPad', 'iPod', 'Watches', 'Other').
 
-# Contributing
+# 💻 Contributing
 
 1. Fork the repository.
 2. Run the following command to update the device list:
@@ -80,6 +82,7 @@ Please note that you need to provide the correct category when calling the funct
 5. Create a pull request to the main repository.
 
 We appreciate your contributions to keep the device list up-to-date!
-## License
+
+## 🔑 License
 
 This project is unlicensed. See the [LICENSE](LICENSE) file for more information.
