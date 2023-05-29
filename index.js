@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const DEVICE_CATEGORIES = ['iPhone', 'iPad', 'iPod', 'Watches', 'Other'];
+
 class RandomDevice {
   constructor(deviceData) {
     this.internalName = deviceData.internalName;
@@ -63,8 +65,26 @@ const getDeviceByIOSVersion = (version, category) => {
   return null;
 };
 
+function searchDeviceByModel(model) {
+  for (const category of DEVICE_CATEGORIES) {
+    const devicesPath = path.join(__dirname, category);
+    const deviceFiles = fs.readdirSync(devicesPath);
+
+    for (const deviceFile of deviceFiles) {
+      const devicePath = path.join(devicesPath, deviceFile);
+      const deviceData = require(devicePath);
+
+      if (deviceData.model === model) {
+        return deviceData;
+      }
+    }
+  }
+
+  return null;
+}
 
 module.exports = {
   getDevice,
   getDeviceByIOSVersion,
+  searchDeviceByModel,
 };
