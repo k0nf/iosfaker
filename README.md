@@ -63,6 +63,23 @@ The `searchDeviceByModel` function searches for devices in all categories (iPhon
 
 Please note that you need to provide the correct category when calling the functions ('iPhone', 'iPad', 'iPod', 'Watches', 'Other').
 
+# Contributing
+
+1. Fork the repository.
+2. Run the following command to update the device list:
+   ```bash
+   yarn update
+   ```
+   or
+   ```bash
+   npm run update
+   ```
+   This command will fetch the latest device information and update the device list in the library.
+3. Test the changes to ensure accuracy.
+4. Commit and push the changes to your forked repository.
+5. Create a pull request to the main repository.
+
+We appreciate your contributions to keep the device list up-to-date!
 ## License
 
 This project is unlicensed. See the [LICENSE](LICENSE) file for more information.
