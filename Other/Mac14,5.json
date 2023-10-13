@@ -1,5 +1,1 @@
-{
-  "internalName": "Mac14,5",
-  "modelName": "MacBook Pro (M2 Max, 14-inch, 2023)",
-  "supportedVersions": ["13.4", "13.3.1", "13.3", "13.2.1", "13.2"]
-}
+{"internalName":"Mac14,5","modelName":"MacBook Pro (M2 Max, 14-inch, 2023)","boardName":"J414cAP","supportedVersions":["14.0","13.6","13.5.2","13.5.1","13.5","13.4.1","13.4","13.3.1","13.3","13.2.1","13.2"]}
