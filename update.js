@@ -33,7 +33,7 @@ const fetchSupportedVersions = async (identifier) => {
 const saveModelToFile = (model) => {
   let folder = "";
   if (model.internalName.startsWith("iPhone")) {
-    folder = "./iPhones/";
+    folder = "./iPhone/";
   } else if (model.internalName.startsWith("iPad")) {
     folder = "./iPads/";
   } else if (model.internalName.startsWith("iPod")) {
