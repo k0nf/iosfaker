@@ -7,6 +7,7 @@ class RandomDevice {
   constructor(deviceData) {
     this.internalName = deviceData.internalName;
     this.modelName = deviceData.modelName;
+    this.boardName = deviceData.boardName;
     this.supportedVersions = deviceData.supportedVersions;
     this.randomVersion = this.getRandomVersion();
   }
@@ -39,6 +40,7 @@ const getDevice = (category) => {
   return {
     internalName: randomDevice.internalName,
     modelName: randomDevice.modelName,
+    boardName: randomDevice.boardName,
     supportedVersions: randomDevice.supportedVersions,
     randomVersion: randomDevice.randomVersion,
   };
