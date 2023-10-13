@@ -1,5 +1,6 @@
 const fs = require("fs");
 const axios = require("axios");
+const path = require("path");
 
 const fetchDevices = async () => {
   try {
@@ -44,7 +45,13 @@ const saveModelToFile = (model) => {
   } else {
     folder = "./Other/";
   }
-  const filename = `${folder}${model.internalName}.json`;
+
+  // Create directory if it doesn't exist
+  if (!fs.existsSync(folder)) {
+    fs.mkdirSync(folder, { recursive: true });
+  }
+
+  const filename = path.join(folder, `${model.internalName}.json`);
   const json = JSON.stringify(model);
 
   fs.writeFile(filename, json, "utf8", (err) => {
@@ -60,12 +67,13 @@ const generateModelFiles = async () => {
   const devices = await fetchDevices();
 
   for (const device of devices) {
-    const { identifier, name } = device;
+    const { identifier, name, boardconfig } = device;
     const supportedVersions = await fetchSupportedVersions(identifier);
 
     const model = {
       internalName: identifier,
       modelName: name,
+      boardName: boardconfig.toString(),
       supportedVersions,
     };
 
