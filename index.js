@@ -41,8 +41,8 @@ const getDevice = (category) => {
     internalName: randomDevice.internalName,
     modelName: randomDevice.modelName,
     boardName: randomDevice.boardName,
-    supportedVersions: randomDevice.supportedVersions,
     randomVersion: randomDevice.randomVersion,
+    supportedVersions: randomDevice.supportedVersions,
   };
 };
 

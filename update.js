@@ -35,13 +35,13 @@ const saveModelToFile = (model) => {
   if (model.internalName.startsWith("iPhone")) {
     folder = "./iPhone/";
   } else if (model.internalName.startsWith("iPad")) {
-    folder = "./iPads/";
+    folder = "./iPad/";
   } else if (model.internalName.startsWith("iPod")) {
-    folder = "./iPods/";
+    folder = "./iPod/";
   } else if (model.internalName.startsWith("Watch")) {
     folder = "./Watches/";
   } else if (model.internalName.startsWith("AppleTV")) {
-    folder = "./AppleTVs/";
+    folder = "./AppleTV/";
   } else {
     folder = "./Other/";
   }
